@@ -4,16 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="466dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="51dp"
-        android:scrollbars="vertical" />
+    tools:context=".InteractionsActivity">
 
     <Button
         android:id="@+id/btnHome"
@@ -21,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:onClick="onClickHome"
         android:text="Home" />
 
     <Button
@@ -29,15 +21,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:onClick="onClickBtnInteractions"
         android:text="Interactions" />
 
-    <Button
-        android:id="@+id/btnScan"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:onClick="onClickBtnScan"
-        android:text="Scan" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:text="TODO: STUFF ABOUT INTERACTIONS HERE" />
 </RelativeLayout>
