@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dontmixit.app" />
+    package="com.example.dontmixit.app" >
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+</manifest>
