@@ -2,6 +2,7 @@ package com.example.dontmixit.feature;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,12 +22,6 @@ public class MainActivity extends AppCompatActivity {
     public static RecyclerView mRecyclerView;
     public static MyAdapter mAdapter;
     public static Context mContext;
-
-    //TODO: Put drug details into this string
-    public static String m_strDrugDetails = "Put drug details in this var";
-
-    //TODO: Put interaction details into this string
-    public static String m_strInteractionDetails = "Put interaction details in this var";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBtnInteractions(android.view.View view) {
+        //TODO: Put interaction details into this string
+        String m_strInteractionDetails = "Put interaction details in this var";
+
         Intent intent = new Intent(this, InteractionsActivity.class);
         intent.putExtra("InteractionDetails", m_strInteractionDetails);
         startActivity(intent);
@@ -61,9 +59,21 @@ public class MainActivity extends AppCompatActivity {
 
     public static void onClickListItem(int index)
     {
+        //TODO: Put drug details into this string
+        String m_strDrugDetails = "Put drug details in this var";
+
         Intent intent = new Intent(mContext, DetailsActivity.class);
         intent.putExtra("DrugDetails", m_strDrugDetails);
         mContext.startActivity(intent);
+    }
+
+    public void onClickBtnSearch(android.view.View view)
+    {
+        TextInputEditText searchBox = (TextInputEditText) findViewById(R.id.searchBox);
+        String searchValue = searchBox.getText().toString();
+        //searchValue has the value typed into the box
+
+        //TODO: code for adding/searching for drug
     }
 
 }
