@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     public static RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    public static MyAdapter mAdapter;
 
 
     @Override
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    public String[] mDataset;
+    private String[] mDataset;
     private final View.OnClickListener mOnClickListener = new MyOnClickListener();
 
     // Provide a reference to the views for each data item
@@ -83,6 +83,11 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public int getItemCount() {
         return mDataset.length;
     }
+
+    public String getItem(int index)
+    {
+        return mDataset[index];
+    }
 }
 
 class MyOnClickListener implements View.OnClickListener
@@ -90,7 +95,7 @@ class MyOnClickListener implements View.OnClickListener
     @Override
     public void onClick(View view) {
         int itemPosition = MainActivity.mRecyclerView.getChildLayoutPosition(view);
-        //String item = adapter.mDataset[itemPosition];
-        Toast.makeText(view.getContext(),"Test" + itemPosition, Toast.LENGTH_LONG).show();
+        String item = MainActivity.mAdapter.getItem(itemPosition);
+        Toast.makeText(view.getContext(),"Test: " + itemPosition + " " + item, Toast.LENGTH_LONG).show();
     }
 }
