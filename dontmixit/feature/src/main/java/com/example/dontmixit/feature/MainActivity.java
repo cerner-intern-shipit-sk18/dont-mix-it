@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static MyAdapter mAdapter;
     public static Context mContext;
 
-    public List<Drug> drugList;
+    public ArrayList<Drug> drugList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new MyAdapter((Drug[])drugList.toArray());
+        mAdapter = new MyAdapter(drugList);
         mRecyclerView.setAdapter(mAdapter);
 
         mContext = this;
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private Drug[] mDataset;
+    private ArrayList<Drug> mDataset;
     private final View.OnClickListener mOnClickListener = new MyOnClickListener();
 
     // Provide a reference to the views for each data item
@@ -95,7 +95,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(Drug[] myDataset) {
+    public MyAdapter(ArrayList<Drug> myDataset) {
         mDataset = myDataset;
     }
 
@@ -116,19 +116,19 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset[position].m_strName);
+        holder.mTextView.setText(mDataset.get(position).m_strName);
 
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 
     public Drug getItem(int index)
     {
-        return mDataset[index];
+        return mDataset.get(index);
     }
 }
 
