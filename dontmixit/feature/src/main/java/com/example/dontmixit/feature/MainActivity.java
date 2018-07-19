@@ -5,17 +5,18 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
+    public static RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
 
 
     @Override
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
 }
 
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private String[] mDataset;
+    public String[] mDataset;
+    private final View.OnClickListener mOnClickListener = new MyOnClickListener();
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -63,6 +65,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.my_text_view, parent, false);
         ViewHolder vh = new ViewHolder(v);
+        v.setOnClickListener(mOnClickListener);
         return vh;
     }
 
@@ -79,5 +82,15 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return mDataset.length;
+    }
+}
+
+class MyOnClickListener implements View.OnClickListener
+{
+    @Override
+    public void onClick(View view) {
+        int itemPosition = MainActivity.mRecyclerView.getChildLayoutPosition(view);
+        //String item = adapter.mDataset[itemPosition];
+        Toast.makeText(view.getContext(),"Test" + itemPosition, Toast.LENGTH_LONG).show();
     }
 }
