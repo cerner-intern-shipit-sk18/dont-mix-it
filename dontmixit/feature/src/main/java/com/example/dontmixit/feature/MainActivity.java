@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     public static RecyclerView mRecyclerView;
     public static MyAdapter mAdapter;
     public static Context mContext;
+
+    public List<Drug> drugList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +36,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        String[] test = new String[20];
-        for (int i = 0; i < 20; i++) {
-            test[i] = "Drug " + i;
-        }
-
-        mAdapter = new MyAdapter(test);
+        mAdapter = new MyAdapter((Drug[])drugList.toArray());
         mRecyclerView.setAdapter(mAdapter);
 
         mContext = this;
@@ -47,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnInteractions(android.view.View view) {
         //TODO: Put interaction details into this string
         String m_strInteractionDetails = "Put interaction details in this var";
+        boolean boolInteractionOkay = false;
 
         Intent intent = new Intent(this, InteractionsActivity.class);
         intent.putExtra("InteractionDetails", m_strInteractionDetails);
+        intent.putExtra("InteractionOkay", boolInteractionOkay);
         startActivity(intent);
     }
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private String[] mDataset;
+    private Drug[] mDataset;
     private final View.OnClickListener mOnClickListener = new MyOnClickListener();
 
     // Provide a reference to the views for each data item
@@ -95,7 +95,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
+    public MyAdapter(Drug[] myDataset) {
         mDataset = myDataset;
     }
 
@@ -116,7 +116,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset[position]);
+        holder.mTextView.setText(mDataset[position].m_strName);
 
     }
 
@@ -126,7 +126,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         return mDataset.length;
     }
 
-    public String getItem(int index)
+    public Drug getItem(int index)
     {
         return mDataset[index];
     }
@@ -139,6 +139,5 @@ class MyOnClickListener implements View.OnClickListener
     {
         int itemPosition = MainActivity.mRecyclerView.getChildLayoutPosition(view);
         MainActivity.onClickListItem(itemPosition);
-
     }
 }
