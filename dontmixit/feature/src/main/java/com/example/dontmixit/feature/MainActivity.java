@@ -55,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickBtnScan(android.view.View view) {
         //TODO: code for scanning
+
+        drugList.add(new Drug("1","1"));
+        mAdapter = new MyAdapter(drugList);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     public static void onClickListItem(int index)

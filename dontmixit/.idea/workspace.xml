@@ -34,21 +34,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-              <folding>
-                <element signature="e#4372#4373#0" expanded="true" />
-                <element signature="e#4410#4411#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Drug.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Drug.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="358">
+              <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -5426,6 +5413,13 @@
             </path>
             <path>
               <item name="dontmixit" type="1abcf292:AndroidViewProjectNode" />
+              <item name="feature" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="feature" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="MainActivity.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="dontmixit" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
@@ -5771,10 +5765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5807,10 +5798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5927,10 +5915,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5938,10 +5923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -6050,10 +6032,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -6061,10 +6040,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -6178,12 +6154,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding>
-            <element signature="e#4372#4373#0" expanded="true" />
-            <element signature="e#4410#4411#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="358">
+          <caret line="60" column="43" lean-forward="false" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
