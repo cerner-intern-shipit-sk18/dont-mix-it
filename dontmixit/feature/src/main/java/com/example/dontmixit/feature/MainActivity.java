@@ -87,10 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static void onClickListItem(int index)
     {
-        String m_strDrugDetails = drugList.get(index).details;
-
         Intent intent = new Intent(mContext, DetailsActivity.class);
-        intent.putExtra("DrugDetails", m_strDrugDetails);
+        intent.putExtra("DrugDetails", drugList.get(index).id);
         mContext.startActivity(intent);
     }
 

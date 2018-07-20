@@ -3,6 +3,7 @@ package com.example.dontmixit.feature;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -13,7 +14,11 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         TextView txtView = (TextView)findViewById(R.id.txtDetails);
-        txtView.setText(getIntent().getStringExtra("DrugDetails"));
+        Drug d = DrugDB.lookup(getIntent().getStringExtra("DrugDetails"));
+        txtView.setText(
+                Html.fromHtml(
+                        "<h2>" + d.name + "</h2><p>" + d.details + "</p>"
+                ));
     }
 
     public void onClickBtnBack(android.view.View view)
