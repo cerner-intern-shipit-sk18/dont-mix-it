@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.content.Context.CLIPBOARD_SERVICE;
 
@@ -67,12 +68,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBtnInteractions(android.view.View view) {
-        //TODO: Put interaction details into this string
-        String m_strInteractionDetails = "Put interaction details in this var";
-        boolean boolInteractionOkay = false;
+        List<Interaction> interactions = InteractionDB.findInteractions(drugList);
+        boolean boolInteractionOkay = interactions.isEmpty();
+
+        String text = "";
+        for(Interaction i: interactions) {
+            text += "<h2>" + i.d1.name + " & " + i.d2.name + "</h2>" +
+                    "<p>" + i.description + "</p>";
+        }
+
 
         Intent intent = new Intent(this, InteractionsActivity.class);
-        intent.putExtra("InteractionDetails", m_strInteractionDetails);
+        intent.putExtra("InteractionDetails", text);
         intent.putExtra("InteractionOkay", boolInteractionOkay);
         startActivity(intent);
     }

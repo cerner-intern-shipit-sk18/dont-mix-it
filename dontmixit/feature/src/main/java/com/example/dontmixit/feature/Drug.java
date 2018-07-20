@@ -6,8 +6,6 @@ public class Drug
     String details;
     String id;
 
-
-
     public Drug(String id, String name, String details)
     {
         this.id = id;
@@ -15,7 +13,4 @@ public class Drug
         this.name = name;
     }
 
-//    addInteraction(Interaction i) {
-//
-//    }
 }
