@@ -57,8 +57,11 @@ public class MainActivity extends AppCompatActivity {
                 Drug d = DrugDB.lookup(text);
                 if (d == null)
                     Toast.makeText( mContext, "Not found.", Toast.LENGTH_LONG).show();
+                else if (drugList.contains(d)) {
+                    Toast.makeText(mContext, "Already scanned drug " + d.name, Toast.LENGTH_SHORT).show();
+                }
                 else {
-                    Toast.makeText(mContext, "Drug: " + d.name, Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, "Added drug " + d.name, Toast.LENGTH_LONG).show();
                     drugList.add(d);
                     mAdapter = new MyAdapter(drugList);
                     mRecyclerView.setAdapter(mAdapter);
@@ -72,10 +75,12 @@ public class MainActivity extends AppCompatActivity {
         boolean boolInteractionOkay = interactions.isEmpty();
 
         String text = "";
-        for(Interaction i: interactions) {
-            text += "<h2>" + i.d1.name + " & " + i.d2.name + "</h2>" +
-                    "<p>" + i.description + "</p>";
-        }
+        if( boolInteractionOkay)
+            text = "<h1>No known interactions!</h1>";
+        else
+            for(Interaction i: interactions)
+                text += "<h2>" + i.d1.name + " & " + i.d2.name + "</h2>" +
+                        "<p>" + i.description + "</p>";
 
 
         Intent intent = new Intent(this, InteractionsActivity.class);
