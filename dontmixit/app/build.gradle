@@ -27,5 +27,4 @@ android {
 dependencies {
     implementation project(':feature')
     implementation project(':base')
-    api 'com.android.volley:volley:1.1.1'
 }

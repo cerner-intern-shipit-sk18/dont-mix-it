@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
         mContext = this;
-
     }
 
     public void onClickBtnInteractions(android.view.View view) {
