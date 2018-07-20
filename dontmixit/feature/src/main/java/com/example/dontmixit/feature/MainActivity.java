@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static MyAdapter mAdapter;
     public static Context mContext;
 
-    public ArrayList<Drug> drugList = new ArrayList<>();
+    public static ArrayList<Drug> drugList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +56,14 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnScan(android.view.View view) {
         //TODO: code for scanning
 
-        drugList.add(new Drug("1","1"));
+        //drugList.add(new Drug("1","1"));
         mAdapter = new MyAdapter(drugList);
         mRecyclerView.setAdapter(mAdapter);
     }
 
     public static void onClickListItem(int index)
     {
-        //TODO: Put drug details into this string
-        String m_strDrugDetails = "Put drug details in this var";
+        String m_strDrugDetails = drugList.get(index).m_strDetails;
 
         Intent intent = new Intent(mContext, DetailsActivity.class);
         intent.putExtra("DrugDetails", m_strDrugDetails);
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         String searchValue = searchBox.getText().toString();
         //searchValue has the value typed into the box
 
-        //TODO: code for adding/searching for drug
+        //TODO: code for adding/searching for drug. add new Drug(Name, details) to drugList
     }
 
 }
