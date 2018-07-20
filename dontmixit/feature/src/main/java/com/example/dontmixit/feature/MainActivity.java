@@ -12,12 +12,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static android.content.Context.CLIPBOARD_SERVICE;
 
@@ -84,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static void onClickListItem(int index)
     {
-        String m_strDrugDetails = drugList.get(index).m_strDetails;
+        String m_strDrugDetails = drugList.get(index).details;
 
         Intent intent = new Intent(mContext, DetailsActivity.class);
         intent.putExtra("DrugDetails", m_strDrugDetails);
@@ -140,7 +138,7 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset.get(position).m_strName);
+        holder.mTextView.setText(mDataset.get(position).name);
 
     }
 
