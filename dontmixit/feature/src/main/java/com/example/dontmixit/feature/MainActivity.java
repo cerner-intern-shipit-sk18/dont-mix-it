@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickBtnSearch(android.view.View view)
     {
-        TextInputEditText searchBox = (TextInputEditText) findViewById(R.id.searchBox);
-        String searchValue = searchBox.getText().toString();
+        //TextInputEditText searchBox = (TextInputEditText) findViewById(R.id.searchBox);
+        //String searchValue = searchBox.getText().toString();
         //searchValue has the value typed into the box
 
         //TODO: code for adding/searching for drug. add new Drug(Name, details) to drugList

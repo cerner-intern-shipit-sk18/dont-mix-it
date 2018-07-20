@@ -3,6 +3,7 @@ package com.example.dontmixit.feature;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,7 +17,7 @@ public class InteractionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_interactions);
 
         TextView txtView = (TextView)findViewById(R.id.textView);
-        txtView.setText(getIntent().getStringExtra("InteractionDetails"));
+        txtView.setText(Html.fromHtml(getIntent().getStringExtra("InteractionDetails")));
 
         InteractionOkay = getIntent().getBooleanExtra("InteractionOkay", false);
 
