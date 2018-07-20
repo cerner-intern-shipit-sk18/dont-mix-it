@@ -2,17 +2,20 @@ package com.example.dontmixit.feature;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.zxing.integration.android.IntentIntegrator;
-
 import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView tv;
+    Button bt;
+    Scanner sc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,28 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tv = (TextView) findViewById(R.id.txt_out);
+        bt = (Button) findViewById(R.id.action_btn);
         tv.setText("Waiting...");
 
+        bt.setOnClickListener(new View.OnClickListener(){
 
-    }
-
-    @Override
-    protected void onResume()
-    {
-
-        IntentIntegrator it = new IntentIntegrator(new Activity() {
-            protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-                IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-                if(result != null)
-                    if(result.getContents() == null)
-                        tv.setText("Cancelled.");
-                    else
-                        tv.setText("Scanned: " + result.getContents());
-                else
-                    tv.setText("Bad stuff...");
+            @Override
+            public void onClick(View view) {
+                IntentIntegrator integrator = new IntentIntegrator(new Scanner(tv));
+                integrator.initiateScan();
             }
         });
-        it.initiateScan();
+
 
     }
     // Get the results:
