@@ -31,14 +31,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+            <state relative-caret-position="191">
+              <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding>
-                <element signature="e#1580#2067#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1580#2354#0" expanded="true" />
+                <element signature="e#2353#2354#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,17 +111,17 @@
         <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Drug.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="19" selection-end-column="7" />
+              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrugDB.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DrugDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DrugDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="270">
+              <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
               <folding>
                 <element signature="e#201#202#0" expanded="true" />
                 <element signature="e#234#235#0" expanded="true" />
@@ -5530,11 +5531,11 @@
         <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DetailsActivity.java" />
         <option value="$PROJECT_DIR$/feature/src/main/res/layout/activity_details.xml" />
         <option value="$PROJECT_DIR$/feature/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java" />
         <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Interaction.java" />
         <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Drug.java" />
         <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/InteractionDB.java" />
         <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DrugDB.java" />
+        <option value="$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -5576,13 +5577,6 @@
               <item name="feature" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="feature" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dontmixit" type="1abcf292:AndroidViewProjectNode" />
-              <item name="feature" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="feature" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="MainActivity.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="dontmixit" type="1abcf292:AndroidViewProjectNode" />
@@ -5887,8 +5881,9 @@
         <state relative-caret-position="441">
           <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
           <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5922,8 +5917,9 @@
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5980,8 +5976,9 @@
         <state relative-caret-position="25">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5991,8 +5988,9 @@
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -6048,8 +6046,9 @@
         <state relative-caret-position="275">
           <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
           <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -6059,8 +6058,9 @@
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -6095,14 +6095,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/InteractionsActivity.java" />
-    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DetailsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feature/src/main/res/layout/activity_details.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -6147,17 +6139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="e#1580#2067#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Interaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -6169,14 +6150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Drug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/InteractionDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -6185,13 +6158,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DrugDB.java">
+    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/Drug.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DrugDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
             <element signature="e#201#202#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/DetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature/src/main/java/com/example/dontmixit/feature/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="54" column="56" lean-forward="false" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1580#2354#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
           </folding>
         </state>
       </provider>

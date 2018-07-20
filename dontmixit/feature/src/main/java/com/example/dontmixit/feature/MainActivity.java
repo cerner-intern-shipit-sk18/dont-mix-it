@@ -53,10 +53,15 @@ public class MainActivity extends AppCompatActivity {
                 ClipData clipData = clipboard.getPrimaryClip();
                 ClipData.Item item = clipData.getItemAt(0);
                 String text = item.getText().toString();
-                //TODO push to list
-
-                //TODO better toast
-                Toast.makeText( mContext, "Drug scanned", Toast.LENGTH_LONG).show();
+                Drug d = DrugDB.lookup(text);
+                if (d == null)
+                    Toast.makeText( mContext, "Not found.", Toast.LENGTH_LONG).show();
+                else {
+                    Toast.makeText(mContext, "Drug: " + d.name, Toast.LENGTH_LONG).show();
+                    drugList.add(d);
+                    mAdapter = new MyAdapter(drugList);
+                    mRecyclerView.setAdapter(mAdapter);
+                }
             }
         });
     }
