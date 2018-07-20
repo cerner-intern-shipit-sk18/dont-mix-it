@@ -1,5 +1,7 @@
 package com.example.dontmixit.feature;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
@@ -17,12 +19,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.Context.CLIPBOARD_SERVICE;
+
 
 public class MainActivity extends AppCompatActivity {
 
     public static RecyclerView mRecyclerView;
     public static MyAdapter mAdapter;
     public static Context mContext;
+    private static ClipboardManager clipboard;
 
     public static ArrayList<Drug> drugList = new ArrayList<>();
 
@@ -40,6 +45,22 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
         mContext = this;
+
+
+        clipboard = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
+        clipboard.addPrimaryClipChangedListener(new ClipboardManager.OnPrimaryClipChangedListener(){
+
+            @Override
+            public void onPrimaryClipChanged() {
+                ClipData clipData = clipboard.getPrimaryClip();
+                ClipData.Item item = clipData.getItemAt(0);
+                String text = item.getText().toString();
+                //TODO push to list
+
+                //TODO better toast
+                Toast.makeText( mContext, "Drug scanned", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public void onClickBtnInteractions(android.view.View view) {
